@@ -17,13 +17,14 @@ function Error404(){
 
         return() =>{
             clearTimeout(idTimeout);
-            clearTimeout(idInterval);
+            clearInterval(idInterval);
         }
     }, [navigate])
 
     return (
         <>
             <p>404 Not Found</p>
+            <p>Redirigiendo en {timer} segundos...</p>
             <Link to="/">Volver al Home</Link>
         </>
     )
